@@ -7,5 +7,5 @@ paginate: 10
 
 markdown: rdiscount
 permalink: pretty
-highlighter: true
+pygments: true
 exclude: [Gemfile*]
