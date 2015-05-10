@@ -1,11 +1,15 @@
 name: "RMX|7"
 description: "Personal tech blog of Romy Elmaco"
-
 url: "rmx7.github.io"
-
-paginate: 10
-
+paginate: 5
 markdown: rdiscount
 permalink: pretty
 pygments: true
 exclude: [Gemfile*]
+
+pages_list:
+	Home: '/'
+	Tech: '/tech'
+	About: '/about'
+	Project: '/project'
+	
