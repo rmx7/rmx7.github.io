@@ -2,5 +2,11 @@
 layout : post
 ---
 
-1. Hello
-2. World
+So i bought a new laptop.
+
+>It's black, it has a red dot in the middle of the keyboard, and it could survive nuclear blast.
+
+### It's a Thinkpad!
+
+Lenovo thinkpad L421. Black and bulky but without doubt a realiable companion.
+
