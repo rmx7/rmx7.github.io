@@ -2,6 +2,11 @@
 	<ul>
 		{% for page in site.pages_list %}
 			<li><a href="{{page[1]}}">{{page[0]}}</a></li>
+            {% if forloop.index < forloop.length - 1 %}
+                {% if forloop.index % 2 != 0 %}
+                    <li>/</li>
+                {% endif %}
+            {% endif %}
 		{% endfor %}
 	</ul>
 </div>

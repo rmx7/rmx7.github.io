@@ -4,12 +4,10 @@ url: "rmx7.github.io"
 paginate: 5
 markdown: rdiscount
 permalink: pretty
-pygments: true
 exclude: [Gemfile*]
 
 pages_list:
-	Home: '/'
-	Tech: '/tech'
-	About: '/about'
-	Project: '/project'
-	
+    Home: '/'
+    Tech: '/tech'
+    About: '/about'
+    Project: '/project'
