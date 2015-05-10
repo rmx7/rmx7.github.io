@@ -1,5 +1,6 @@
 <div id="container">
     {% for post in site.posts %}
+    <div class="post">
         <h5>
             <div class="post-info">{{post.date | date: '%B %d, %Y'}}</div>
         </h5>
@@ -10,5 +11,6 @@
                 <a href="{{post.url}}">Read more</a>
             </p>
         </div>
+    </div>
     {% endfor %}
 </div>
