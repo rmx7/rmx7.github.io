@@ -65,8 +65,9 @@
 	padding-right:6px;
 }
 
-#container h2 {
-	color:#2c3e50;
+#container h1 a {
+    text-decoration:none;
+    color:#2c3e50;
 }
 
 #container h5 {
@@ -84,8 +85,9 @@
 	margin-bottom: 60px;
 }
 
-.read-more {
+.read-more a{
 	color: #2980b9;
+    text-decoration:none;
 }
 
 #footer {
