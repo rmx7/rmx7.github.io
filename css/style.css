@@ -60,7 +60,7 @@
 }
 
 #container {
-	font-family:"Comic Sans MS", cursive, sans-serif;
+	font-family:Verdana, Geneva, sans-serif;
 	padding-left:6px;
 	padding-right:6px;
 }
@@ -76,9 +76,9 @@
 	font-family: "Verdana";
 }
 
-#container .post-content {
+.content {
+    font-size:14px;
 	color: #4d4d4d;
-	letter-spacing:1px;
 }
 
 .post {
@@ -129,7 +129,7 @@
 	display:inline-block;
 }
 
-#profile-picture {
+#about{
     margin-bottom: 30px;
 }
 
