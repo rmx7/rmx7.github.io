@@ -128,3 +128,11 @@
 .tags {
 	display:inline-block;
 }
+
+#profile-picture {
+    margin-bottom: 30px;
+}
+
+#skill-statistic tr td:first-child{
+    text-align:right;
+}
