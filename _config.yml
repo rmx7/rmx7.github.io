@@ -8,6 +8,6 @@ exclude: [Gemfile*]
 
 pages_list:
     Home: '/'
-    Tech: '/tech'
-    About: '/about'
-    Project: '/project'
+    Tech: '/page/tech'
+    About: '/page/about'
+    Project: '/page/project'
