@@ -15,14 +15,12 @@ skills  :
     Linux       : 5
 ---
 
-```
-Hello, my name is Romy Elmaco. I am a Software Engineer. I live in Jakarta, Indonesia.
-I've been doing professional programming for five years.
-You can see my skills statistic below.
-```
+Hello, my name is Romy Elmaco. I am a Software Engineer.   
+I've been doing professional programming for five years.  
+I live in Jakarta, Indonesia.  
+
+You can see my skills statistic below.  
 {% include statistic.md %}
 
-```
-You can contact me at rominux@gmail.com
-```
+You can contact me at rominux@gmail.com.  
 [id.linkedin](https://id.linkedin.com/in/romyelmaco)
