@@ -2,13 +2,13 @@
 layout : post
 ---
 
-First, check the content of .bash_profile.
+First, check the content of our ~/.bash_profile.
 {% highlight bash %}
 # ~/.bash_profile
 [[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
 {% endhighlight %}
 
-As we can see that .bash_profile is actually searching for a file named .profile inside current user home directory so let's declare the env var in there. In this case, i want to declare the JAVA_HOME env variable.
+As we can see that .bash_profile is actually searching for a file named .profile inside our home directory. So let's declare our environment variable in .profile instead. In my case, i want to declare the JAVA_HOME env variable.
 
 {% highlight bash %}
 # ~/.profile
@@ -26,13 +26,14 @@ But that's not how .profile get sourced normally. Logout and login again, open t
 echo $JAVA_HOME
 {% endhighlight %}
 
-It should print our JDK installation path. Then check if the version of our executable java binaries.
+It should print our JDK installation path. Then check the version of our executable java binaries.
 {% highlight bash %}
 java -version
 {% endhighlight %}
 
-Next, try to run java program both from command line and GUI Menu then let's see what happen. I succesfully run eclipse through the command line but when i am trying to open it from Cinnamon menu, it failed. So what happen exactly?
+Next, try to run java program both from command line and GUI Menu then let's see what happen. I can succesfully run eclipse launcher from terminal. Great, but how about running it from GUI menu?
 
+### JAVA_HOME cannot be detected by GUI Menu of cinnamon desktop !
 Usually on linux, when we want to declare an environment variables then we only need to add it into one of the following files.
 
 - User scope
@@ -46,6 +47,7 @@ Usually on linux, when we want to declare an environment variables then we only 
 
 After that, all of the variables should be available on X session or terminal session each on their own scope. But it turns out this is not the case on Debian 8. I am using cinnamon version of Debian 8 which is using lightDM as the desktop manager. LightDM does not source the listed file above when creating new X session whereas GDM or KDM are doing exactly the opposite of what LightDM did. So in a nutshell, lightDM separates rc files for login shell and the X session. That's mean any other attempt to declare the env var inside the rest of listed files above is useless. 
 
+### .xsessionrc to the rescue
 So what we need to do is create ~/.xsessionrc inside our home directory then put our env var declaration in there.
 {% highlight bash %}
 # ~/.xsessionrc
@@ -63,4 +65,4 @@ I don't know why they're doing this. But for me this is not a bug , it's more li
 
 Hope that help someone out there.  
 
-Cheers...
+See you later!

@@ -62,13 +62,13 @@
     </h5>
     <h1>Sourcing Environment Variables On Debian 8</h1>
     <div class="post-content">
-       <p>First, check the content of .bash_profile.</p>
+       <p>First, check the content of our ~/.bash_profile.</p>
 
 <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># ~/.bash_profile</span>
 <span class="o">[[</span> -s <span class="s2">&quot;$HOME/.profile&quot;</span> <span class="o">]]</span> <span class="o">&amp;&amp;</span> <span class="nb">source</span> <span class="s2">&quot;$HOME/.profile&quot;</span> <span class="c"># Load the default .profile</span></code></pre></div>
 
 
-<p>As we can see that .bash_profile is actually searching for a file named .profile inside current user home directory so let's declare the env var in there. In this case, i want to declare the JAVA_HOME env variable.</p>
+<p>As we can see that .bash_profile is actually searching for a file named .profile inside our home directory. So let's declare our environment variable in .profile instead. In my case, i want to declare the JAVA_HOME env variable.</p>
 
 <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># ~/.profile</span>
 <span class="nb">export </span><span class="nv">JAVA_HOME</span><span class="o">=</span><span class="nv">$HOME</span>/Apps/jdk1.8
@@ -85,12 +85,14 @@
 <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="nv">$JAVA_HOME</span></code></pre></div>
 
 
-<p>It should print our JDK installation path. Then check if the version of our executable java binaries.</p>
+<p>It should print our JDK installation path. Then check the version of our executable java binaries.</p>
 
 <div class="highlight"><pre><code class="language-bash" data-lang="bash">java -version</code></pre></div>
 
 
-<p>Next, try to run java program both from command line and GUI Menu then let's see what happen. I succesfully run eclipse through the command line but when i am trying to open it from Cinnamon menu, it failed. So what happen exactly?</p>
+<p>Next, try to run java program both from command line and GUI Menu then let's see what happen. I can succesfully run eclipse launcher from terminal. Great, but how about running it from GUI menu?</p>
+
+<h3>JAVA_HOME cannot be detected by GUI Menu of cinnamon desktop !</h3>
 
 <p>Usually on linux, when we want to declare an environment variables then we only need to add it into one of the following files.</p>
 
@@ -116,6 +118,8 @@
 
 <p>After that, all of the variables should be available on X session or terminal session each on their own scope. But it turns out this is not the case on Debian 8. I am using cinnamon version of Debian 8 which is using lightDM as the desktop manager. LightDM does not source the listed file above when creating new X session whereas GDM or KDM are doing exactly the opposite of what LightDM did. So in a nutshell, lightDM separates rc files for login shell and the X session. That's mean any other attempt to declare the env var inside the rest of listed files above is useless.</p>
 
+<h3>.xsessionrc to the rescue</h3>
+
 <p>So what we need to do is create ~/.xsessionrc inside our home directory then put our env var declaration in there.</p>
 
 <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># ~/.xsessionrc</span>
@@ -133,7 +137,7 @@
 
 <p>Hope that help someone out there.</p>
 
-<p>Cheers...</p>
+<p>See you later!</p>
 
     </div>
     
