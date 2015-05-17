@@ -1,5 +1,6 @@
 ---
 layout : post
+tech   : true
 ---
 
 First, check the content of our ~/.bash_profile.

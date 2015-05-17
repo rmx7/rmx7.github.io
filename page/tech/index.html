@@ -1,5 +1,21 @@
 ---
 layout : default
 ---
-
-tech
+<div id="container" class="content">
+{% for post in site.posts %}
+    {% if post.tech == true %}
+    <div class="post">
+        <h5>
+            <div class="post-info">{{post.date | date: '%B %d, %Y'}}</div>
+        </h5>
+        <h1><a href="{{post.url}}">{{post.title}}</a></h1>
+        <div class="post-content">
+            {{post.excerpt}}
+            <p class="read-more">
+            <a href="{{post.url}}">Read more</a>
+            </p>
+        </div>
+    </div>
+    {% endif %}
+{% endfor %}
+</div>
