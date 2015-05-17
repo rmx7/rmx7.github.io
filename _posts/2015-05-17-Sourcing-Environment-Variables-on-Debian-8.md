@@ -60,3 +60,7 @@ In my case, i am successfully run eclipse through the cinnamon menu. But the the
 {% endhighlight %}
 
 I don't know why they're doing this. But for me this is not a bug , it's more like a design decision from lightDM developer.
+
+Hope that help someone out there.  
+
+Cheers...
