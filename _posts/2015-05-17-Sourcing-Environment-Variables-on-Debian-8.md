@@ -31,7 +31,7 @@ It should print our JDK installation path. Then check if the version of our exec
 java -version
 {% endhighlight %}
 
-Next, try to run java program both from command line or GUI Menu then let's see what happen. I succesfully run eclipse through the command line but when i am trying to open it from Cinnamon menu, it failed. So what happen exactly?
+Next, try to run java program both from command line and GUI Menu then let's see what happen. I succesfully run eclipse through the command line but when i am trying to open it from Cinnamon menu, it failed. So what happen exactly?
 
 Usually on linux, when we want to declare an environment variables then we only need to add it into one of the following files.
 
