@@ -120,14 +120,14 @@
 
 <h3>.xsessionrc to the rescue</h3>
 
-<p>So what we need to do is create ~/.xsessionrc inside our home directory then put our env var declaration in there.</p>
+<p>So what we need to do is to create ~/.xsessionrc inside our home directory then put our env var declaration in there.</p>
 
 <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># ~/.xsessionrc</span>
 <span class="nb">export </span><span class="nv">JAVA_HOME</span><span class="o">=</span><span class="nv">$HOME</span>/Apps/jdk1.8
 <span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$JAVA_HOME</span>/bin</code></pre></div>
 
 
-<p>In my case, i am successfully run eclipse through the cinnamon menu. But the the downside is we need to edit both files everytime we want to modify something. So here is my solution. Instead of redeclare our variables inside .xsessionrc, why don't we just source the .profile again inside the .xsessionrc. By this way, we only need to modify .profile file if we want to add, delete, or update the environment variables.</p>
+<p>In my case, i am successfully run eclipse through the cinnamon menu. But the downside is we need to edit both files everytime we want to modify something. So here is my solution. Instead of redeclare our variables inside .xsessionrc, why don't we just source the .profile again inside the .xsessionrc. By this way, we only need to modify .profile file if we want to add, delete, or update the environment variables.</p>
 
 <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># ~/.xsessionrc</span>
 . ~/.profile</code></pre></div>
