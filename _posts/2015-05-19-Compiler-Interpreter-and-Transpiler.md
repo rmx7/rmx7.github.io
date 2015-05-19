@@ -90,7 +90,6 @@ See the difference? In Java we need to strictly declare the type of our variable
 Another name for this kind of conception is Duck Typing. If an object walk like a duck, swim like a duck, and whack like a duck then that object must be a duck. So on the above example the ruby runtime might think, "Oh, that object is surrounded by double quote and it consist majorily by alphabets then it must be a String !".
 
 Then we can try to run it.
-
 ```
 $ ruby hello.rb
 Hello World
@@ -98,11 +97,39 @@ $ ls
 hello.rb
 ```
 
-It doesn't create any bytecode file. The `ruby` command process the code then run it in one go. The interpreter translate our code into bytecode at the runtime. So the routine is read->translate->execute. That's why it's often said that interpreter program will never be as fast as the pre compiled one like Java. For a small program that may be true, but the performance of a large scale program depends on many factor such caching, indexing, database design, threading, pattern. In short, the Architectural Design is what most important to think about.
+It doesn't create any bytecode file. The `ruby` command process the code then run it in one go. The interpreter translate our code into bytecode at the runtime. So the routine is read->translate->execute. That's why it's often said that interpreter program will never be as fast as the pre compiled one like Java because it will always one step slower. For a small program that may be true, but the performance of a large scale program depends on many factor such caching, indexing, database design, threading, pattern. In short, the Architectural Design is what most important to think about.
 
 Some languages that fall into this category is
 
 > Ruby, Python, PHP, Groovy(JVM based)
+
+###Transpiler
+No matter how good your architeture design is by using caching, indexing, or whatever fancy technique you're using, you'll soon hit the performance barrier of interpreter languages. In the end, you'll want the native performance but without sacrifying the versatily development of interpreter languages. Facebook has experienced it before and made a solution for it. They created a compiler which compiles PHP code into C++ code, the C++ code then compiles into bytecode and run in production environment. 
+
+I don't have access to facebook HPHPc compiler so let's use another transpiled language as an example. It's coffeescript, it compiles into javascript. The lexical structure itself is a bit more rubyish, not really but nailed it.
+
+{% highlight coffee %}
+s = "Hello World"
+sayHello = (s) -> alert(s)
+{% endhighlight %}
+
+The above code compiles into
+{% highlight javascript %}
+var s, sayHello;
+
+s = "Hello World";
+
+sayHello = function(s) {
+  return alert(s);
+};
+{% endhighlight %}
+
+
+
+
+
+
+
 
 
 
