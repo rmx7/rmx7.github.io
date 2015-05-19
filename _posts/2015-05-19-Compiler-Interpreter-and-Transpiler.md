@@ -86,9 +86,9 @@ def s = "Hello World"
 
 See the difference? In Java we need to strictly declare the type of our variable where in Ruby we did not. The **typed** in dynamically typed term means type of the variable. It's not how we type the keyboard when we code the program! Ruby does have interactive shell which can be used to run the code directly in it. Yes it's dynamic, but that's not what it mean by dynamically typed language. 
 
-Another name for this kind of conception is Duck Typing. If an object walks like a duck, swim like a duck, and whack like a duck then that object must be a duck. So on the above example the ruby runtime might think.
+Another name for this kind of conception is Duck Typing. If an object walk like a duck, swim like a duck, and whack like a duck then that object must be a duck. So on the above example the ruby runtime might think, "Oh, that object is surrounded by double quote and it consist majorily by alphabet then it must be a String !".
 
->"Oh, that object is surrounded by double quote and it consist majorily by alphabet then it must be a String !".
+
 
 
 
