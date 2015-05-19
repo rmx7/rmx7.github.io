@@ -60,6 +60,6 @@ Hello World
 
 Instead of compiling our code into low level native bytecodes, it will be compiled to high level bytecodes or intermediate code. These bytecodes can be executed by passing it as the first argument of `java` command. The `java` command will create a new Java process or JVM instance and our intermediate code will be thrown into it. But of course the JVM itself is running on a real machine, so in the end our intermediate should be transformed into real machine readable code at some point of the process.
 
-As long as there is JVM installed, our intermediate code should be run just fine on any OS and architecture. 
+As long as there is JVM installed, our intermediate code should be run just fine on any OS and architecture.  
 
 
