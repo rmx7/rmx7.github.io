@@ -114,8 +114,14 @@ I don't have access to facebook HPHPc compiler so let's use another transpiled l
 s = "Hello World"
 sayHello = (s) -> alert(s)
 {% endhighlight %}
-
-The above code compiles into
+```
+$ ls src
+hello.coffee
+$ coffee --compile --output lib/ src/
+$ ls lib
+hello.js
+```
+Here is the transpiling result
 {% highlight javascript %}
 var s, sayHello;
 
