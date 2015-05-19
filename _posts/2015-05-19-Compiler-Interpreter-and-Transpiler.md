@@ -131,7 +131,7 @@ Some of transpiled languages are
 > coffeescript, typescript, SCSS, LESS, and a hybrid called Kotlin.
 
 ### Conclusion
-Phew, such a long post really. I never thought i'll write this long. Actually there are topics that i want to cover here such like HHVM and Kotlin. But maybe next time. Just a taste from the devil, kotlin is 100% interoptible with java and can be compiled to java bytecode or javascript. 
+Phew, such a long post really. I never thought i'll write this long. Actually there are topics that i want to cover here such like HHVM and Kotlin. But maybe next time. Just a taste from the devil though, kotlin is 100% interoptible with java and can be compiled to java bytecode or javascript. 
 
 Okay, see you next post. 
 
