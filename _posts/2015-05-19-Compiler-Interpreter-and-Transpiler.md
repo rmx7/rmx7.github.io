@@ -15,7 +15,7 @@ A compiler usually compiles our code into an understandable machine code or byte
 Think of native compiler as the Indian language of American continent. We know Indian is the native people of American continent and if we want to communicate with them then we need to speak with their language. The indian language is unique to themself as it's not widely used in other region.
 
 Take a look at the following example.
-{% hightlight c %}
+{% highlight c %}
 // hello.c
 #include <stdio.h>
 
