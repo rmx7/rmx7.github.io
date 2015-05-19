@@ -34,11 +34,15 @@ $ ./hello
 Hello, world!
 ```
 
-I compiled the C code using gcc compiler on a x86_64 PC architecture debian linux machine which result is helloprog bytecode. It should run the bytecode successfully on that system. Can it run on PowerPC machine? No, because the bytecode is tied to PC x86 Architecture. Can it run on windows? No, because the operating system is different. So it must be able to run on other linux with same PC spec right? Maybe yes, only if that linux is 64 bit. It's complicated! Yes it is, that's why when we want to download a native application there are many available download option for different OS and different architecture. This is what we called a native application which bytecodes is native. 
+I compiled the C code using gcc compiler on a x86_64 PC architecture debian linux machine which result is helloprog bytecode. It should run the bytecode successfully on that system. Can it run on PowerPC machine? No, because the bytecode is tied to PC x86 Architecture. Can it run on windows? No, because the operating system is different. So it must be able to run on other linux with same PC spec right? Maybe yes, only if that linux is 64 bit. It's complicated! Yes it is, that's why when we want to download a native application there are many available download option for different OS and different architecture. This is what we called a native application which bytecodes is native.
+
+Here is some languages that fall into this category.
+
+> C, C++, Pascal, Cobol, Fortran
 
 ####Runtime Compiler (xVM Compiler)
 
-If we want speed then we can go by building a native application but it's tightly coupled with the machine it's being built by. So we need a more universal language like English, a more universal bytecodes for our program. One of the most popular runtime right now is Java Virtual Machine or JVM for short. 
+If we want speed then we can go by building a native application but it's tightly coupled with the machine it's being built with. So we need a more universal language like English, a more universal bytecodes for our program. One of the most popular runtime right now is Java Virtual Machine or JVM for short. 
 
 Let's take a look.
 {% highlight java %}
@@ -58,8 +62,48 @@ $ java Hello.class
 Hello World
 ```
 
-Instead of compiling our code into low level native bytecodes, it will be compiled to high level bytecodes or intermediate code. These bytecodes can be executed by passing it as the first argument of `java` command. The `java` command will create a new Java process or JVM instance and our intermediate code will be thrown into it. But of course the JVM itself is running on a real machine, so in the end our intermediate should be transformed into real machine readable code at some point of the process.
+Instead of compiling our code into low level native bytecodes, it will be compiled into high level bytecodes or intermediate code. These bytecodes can be executed by passing it as the first argument of `java` command. The `java` command will create a new Java process or JVM instance and our intermediate code will be thrown into it. But of course the JVM itself is running on a real machine, so in the end our intermediate should be transformed into real machine readable code at some point of the process.
 
-As long as there is JVM installed, our intermediate code should be run just fine on any OS and architecture.  
+As long as there is JVM installed, our intermediate code should run just fine on any OS and architecture. Scalability, is that you?
+
+Here is some languages that fall into this category
+
+> Java (JVM), Scala(JVM), Kotlin(JVM), C#.NET, VB.NET
+
+###Interpreter
+
+Now we talk about dynamically compiled language. Do not misinterpret it the same  as dynamically typed language. It's different! Here is why.
+
+{% highlight java %}
+// Java
+String s = "Hello World";
+{% endhighlight %}
+
+{% highlight ruby %}
+# Ruby
+def s = "Hello World"
+{% endhighlight %}
+
+See the difference? In Java we need to strictly declare the type of our variable where in Ruby we did not. The **typed** in dynamically typed term means type of the variable. It's not how we type the keyboard when we code the program! Ruby does have interactive shell which can be used to run the code directly in it. Yes it's dynamic, but that's not what it mean by dynamically typed language. 
+
+Another name for this kind of conception is Duck Typing. If an object walks like a duck, swim like a duck, and whack like a duck then that object must be a duck. So on the above example the ruby runtime might think.
+
+>"Oh, that object is surrounded by double quote and it consist majorily by alphabet then it must be a String !".
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
