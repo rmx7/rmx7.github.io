@@ -126,7 +126,7 @@ sayHello = function(s) {
 };
 {% endhighlight %}
 
-When we're developing a large Javascript application, with the nature of javascript sooner or later your code will turn into chunks of spaghetti code. By using coffeescript, it will make the development easier and structured because it's refined lexical structure. But here comes another problem, when the application hits production phase you'll end up with two set of codes and when an error occur, you need trace it on both files which will lead to maintenance nightmare. Transpiler is a double edged concept so use it wise. Even facebook ends up by creating their own VM called HHVM to overcome this issue (i'll cover it later).
+When we're developing a large Javascript application, with the nature of javascript sooner or later your code will turn into chunks of spaghetti code. By using coffeescript, it will make the development easier and structured because of the more refined lexical structure. But here comes another problem, when the application hits production phase you'll end up with two set of codes and when an error occur, you need trace it on both files which will lead to maintenance nightmare. Transpiler is a double edged concept so use it wise. Even facebook ends up by creating their own VM called HHVM to overcome this issue (i'll cover it later).
 
 Some of transpiled languages are
 > coffeescript, typescript, SCSS, LESS, and a hybrid called Kotlin.
@@ -134,7 +134,7 @@ Some of transpiled languages are
 ### Conclusion
 Phew, such a long post really. I never thought i'll write this long. Actually there are topics that i want to cover here such like HHVM and Kotlin. But maybe next time. Just a taste from the devil though, kotlin is 100% interoptible with java and can be compiled to java bytecode or javascript. 
 
-Okay, see you next post. 
+Adios!
 
 
 
