@@ -1,5 +1,6 @@
 ---
 layout : post
+tech   : true
 ---
 
 I have deep interest on virtual machine. The public release of HHVM is tickling my curiosity. So let's just take a look at it. First thing first, we need to download it. Fortunately there are pre built packages for debian jessie that officially supported by facebook themself. You can check all available pre-built packages [here](https://github.com/facebook/hhvm/wiki/Prebuilt-Packages-for-HHVM). There is no windows version at this time and also mac user need to build it themself. 
