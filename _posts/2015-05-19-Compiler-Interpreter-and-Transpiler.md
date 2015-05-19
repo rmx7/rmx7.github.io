@@ -1,5 +1,6 @@
 ---
 layout : post
+tech   : true
 ---
 
 As a software engineer, if i want to learn a new programming language then i'll start by doing a quick research about the compilation process then i'll classifying it as a statically compiled or dynamically compiled languages but suddenly there are transpiled languages. Uh okay, what is it actually?
