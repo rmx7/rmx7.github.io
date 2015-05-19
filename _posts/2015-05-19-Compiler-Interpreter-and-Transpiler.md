@@ -80,13 +80,29 @@ String s = "Hello World";
 {% endhighlight %}
 
 {% highlight ruby %}
-# Ruby
+# hello.rb
 def s = "Hello World"
+puts s
 {% endhighlight %}
 
-See the difference? In Java we need to strictly declare the type of our variable where in Ruby we did not. The *typed* in dynamically typed term means type of the variable. It's not how we type the keyboard when we code the program! Ruby does have interactive shell which can be used to run the code directly in it. Yes it's dynamic, but that's not what it mean by dynamically typed language. 
+See the difference? In Java we need to strictly declare the type of our variable where in Ruby we did not. The **typed** in dynamically typed term means type of the variable. It's not how we type the keyboard when we code the program! Ruby does have interactive shell which can be used to run the code directly in it. Yes it's dynamic, but that's not what it mean by dynamically typed language. 
 
-Another name for this kind of conception is Duck Typing. If an object walk like a duck, swim like a duck, and whack like a duck then that object must be a duck. So on the above example the ruby runtime might think, _"Oh, that object is surrounded by double quote and it consist majorily by alphabet then it must be a String !"_.
+Another name for this kind of conception is Duck Typing. If an object walk like a duck, swim like a duck, and whack like a duck then that object must be a duck. So on the above example the ruby runtime might think, "Oh, that object is surrounded by double quote and it consist majorily by alphabets then it must be a String !".
+
+Then we can try to run it.
+```
+$ ruby hello.rb
+Hello World
+$ ls
+hello.rb
+```
+
+It doesn't create any bytecode file. The `ruby` command process the code then run it in one go. The interpreter translate our code into bytecode at the runtime. So the routine is read->translate->execute. That's why it's often said that interpreter program will never be as fast as the pre compiled one like Java. For a small program that may be true, but the performance of a large scale program depends on many factor such caching, indexing, database design, threading, pattern. In short, the Architectural Design is what most important to think about.
+
+Some languages that fall into this category is
+
+> Ruby, Python, PHP, Groovy(JVM based)
+
 
 
 
