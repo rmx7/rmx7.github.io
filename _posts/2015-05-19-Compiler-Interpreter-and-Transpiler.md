@@ -132,7 +132,7 @@ sayHello = function(s) {
 };
 {% endhighlight %}
 
-When we're developing a large Javascript application if don't put enough discipline in our code then there is a high chance that we'll struggle with parenthesis nightmare. Coffeescript si designed to reduce the needs of using parenthesis and semi colon. But here comes another problem, when the application hits production phase you'll end up with two set of codes and when an error occur, you need trace it on both files which will lead to maintenance nightmare. Transpiler is a double edged concept so use it wise. Even facebook ends up by creating their own VM called HHVM to overcome this issue (i'll cover it later).
+When we're developing a large Javascript application if don't put enough discipline in our code then there is a high chance that we'll struggle with parenthesis nightmare. Coffeescript is designed to reduce the needs of using parenthesis and semi colon. But here comes another problem, when the application hits production phase you'll end up with two set of codes and when an error occur, you need trace it on both files which will lead to maintenance nightmare. Transpiler is a double edged concept so use it wise. Even facebook ends up by creating their own VM called HHVM to overcome this issue (i'll cover it later).
 
 Some of transpiled languages are
 > coffeescript, typescript, SCSS, LESS, and a hybrid called Kotlin.
