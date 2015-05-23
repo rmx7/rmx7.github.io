@@ -52,7 +52,7 @@ class MyClass {
 }
 
 $test = new MyClass();
-$test->increment(1) . "\n";
+print $test->increment(1) . "\n";
 {% endhighlight %}
 Then run it.
 
