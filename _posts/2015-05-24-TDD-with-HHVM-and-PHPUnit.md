@@ -7,7 +7,7 @@ In this post, i want to try practicing TDD with my previous completed setup of H
 
 I'll creating a FizzBuzz generate method which will return "Fizz" string if the given number is a factor of 3, return "Buzz" if the given number is a factor of 5, return "FizzBuzz" if the given number is a factor of 3 and 5, finally return the number as it is if the given number is others.
 
-####STEP 1
+####STEP 1 - Blind Test
 {% highlight php %}
 <?hh
 require 'FizzBuzz.hh'
