@@ -315,6 +315,7 @@ class FizzBuzzTest extends PHPUnit_Framework_TestCase {
         $this->assertEquals("Buzz", $fizzbuzz->generate(5));
         $this->assertEquals("FizzBuzz", $fizzbuzz->generate(15));
         $this->assertEquals("0", $fizzbuzz->generate(0));
+        $this->assertEquals("4", $fizzbuzz->generate(4));
     }
 }
 {% endhighlight php %}
